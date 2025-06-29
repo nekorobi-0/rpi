@@ -14,5 +14,6 @@ def get_temp_and_humidity() -> dict:
     tempraure, humidity = dht_sensor.get_data()
     return {"temperature_celsius": tempraure, "humidity_percent": humidity}
 if __name__ == "__main__":
-    
+    print("Starting server...")
+    print(dht_sensor.get_data())
     uvicorn.run(host="192.168.0.236",port=8000, app=app)
