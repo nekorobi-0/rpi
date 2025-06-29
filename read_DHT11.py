@@ -28,8 +28,8 @@ class DHT11Sensor:
 
 
 # クラスのインスタンスを作成
-dht_sensor = DHT11Sensor(board.D23)
 if __name__ == "__main__":
+    dht_sensor = DHT11Sensor(board.D23)
     while True:
         temperature, humidity = dht_sensor.get_data()
         print(f"温度: {temperature:.1f} C, 湿度: {humidity}%")
