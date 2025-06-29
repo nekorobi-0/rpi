@@ -16,4 +16,4 @@ def get_temp_and_humidity(ctx: Context) -> dict:
     except:
         raise exceptions.ResourceError("Failed to read temperature and humidity data")
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="streamable-http")
